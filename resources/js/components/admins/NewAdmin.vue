@@ -1,7 +1,7 @@
 <template>
     <div class="card">
         <div class="card-body">
-            <h6 class="mb-0 text-uppercase text-center">NEW ADMIN DETAILS</h6>
+            <h6 class="mb-0 text-uppercase text-center">NEW CLUB ADMIN DETAILS</h6>
             <div class="card border-top border-0 border-4 border-white">
                 <div class="card-body">
                     <!-- <div class="card-title d-flex align-items-center">
@@ -147,7 +147,8 @@ export default {
                 phone: this.phone,
                 dob: this.dob,
                 nationality:this.nationality,
-                password:password
+                password:password,
+                role:"club-admin"
             };
             // let currentObj = this;
             // this.sendData = true;

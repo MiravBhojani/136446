@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Auth;
 
 /*
 |--------------------------------------------------------------------------
@@ -25,8 +26,20 @@ Route::get('new-admin',function(){
     return view('admin.club-admins.create');
 });
 
-Route::get('orders-list',function(){
-    return view('admin.orders.index');
+Route::get('players-list',function(){
+    return view('admin.players.index');
+});
+
+Route::get('new-player',function(){
+    return view('admin.players.create');
+});
+
+Route::get('matches-list',function(){
+    return view('admin.matches.index');
+});
+
+Route::get('new-match',function(){
+    return view('admin.matches.create');
 });
 
 Route::get('/', function () {

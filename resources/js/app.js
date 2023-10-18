@@ -26,6 +26,8 @@ Vue.component('new-admin', require('./components/admins/NewAdmin.vue').default);
 Vue.component('admin-list', require('./components/admins/AdminList.vue').default);
 Vue.component('new-player', require('./components/players/NewPlayer.vue').default);
 Vue.component('players-list', require('./components/players/PlayersList.vue').default);
+Vue.component('new-match', require('./components/matches/NewMatch.vue').default);
+Vue.component('matches-list', require('./components/matches/MatchesList.vue').default);
 Vue.component('dashboard', require('./components/dashboard/Dashboard.vue').default);
 
 

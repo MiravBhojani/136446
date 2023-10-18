@@ -65,7 +65,7 @@
 			</div>
 		</div>
 		<footer class="bg-dark shadow-sm p-2 text-center fixed-bottom">
-			<p class="mb-0 text-white">Copyright © 2023 All right reserved.</p>
+			<!-- <p class="mb-0 text-white">Copyright © 2023 All right reserved.</p> -->
 		</footer>
 	</div>
 	<!--end wrapper-->

@@ -16,19 +16,31 @@
 					<a href="javascript:;" class="has-arrow">
 						<div class="parent-icon"><i class='bx bx-home-circle'></i>
 						</div>
-						<div class="menu-title">Dashboard</div>
+						<div class="menu-title">Dashboard </div>
 					</a>
 					<ul>
-                    <li> <a href="{{url('new-admin')}}"><i class="bx bx-right-arrow-alt"></i>New Admin</a>
+                        @if(Auth::user()->role==="admin")
+                    <li> <a href="{{url('new-admin')}}"><i class="bx bx-right-arrow-alt"></i>New Club</a>
 						</li>
-                        <li> <a href="{{url('admins-list')}}"><i class="bx bx-right-arrow-alt"></i>Admins List</a>
+                        <li> <a href="{{url('admins-list')}}"><i class="bx bx-right-arrow-alt"></i>Clubs List</a>
 						</li>
-						<li> <a href=""><i class="bx bx-right-arrow-alt"></i>Teams/Clubs</a>
+
+
+                        <li> <a href="{{url('new-match')}}"><i class="bx bx-right-arrow-alt"></i>New Match</a>
 						</li>
-						<li> <a href="#"><i class="bx bx-right-arrow-alt"></i>Players</a>
+                        @endif
+                        @if(Auth::user()->role==="admin" || Auth::user()->role==="club-admin")
+                        <li> <a href="{{url('matches-list')}}"><i class="bx bx-right-arrow-alt"></i>Matches List</a>
 						</li>
-						<li> <a href="#"><i class="bx bx-right-arrow-alt"></i>Scoring</a>
+                        @endif
+
+                        @if(Auth::user()->role==="club-admin")
+						<li> <a href="{{url('new-player')}}"><i class="bx bx-right-arrow-alt"></i>New Player</a>
 						</li>
+						<li> <a href="{{url('players-list')}}"><i class="bx bx-right-arrow-alt"></i>Players Lists</a>
+						</li>
+                        @endif
+
 						<li>
                         <li> <a href="{{ route('logout') }}"
                                        onclick="event.preventDefault();

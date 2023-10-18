@@ -7,7 +7,7 @@
 						<div class="card-body" v-if="!displayEditForm">
 							<div class="d-flex align-items-center">
 								<div class="center">
-									<h5 class="mb-0 text-center ">Admins List</h5>
+									<h5 class="mb-0 text-center ">Clubs List</h5>
 								</div>
 								<div class="font-22 ms-auto"><i class="bx bx-dots-horizontal-rounded"></i>
 								</div>
@@ -70,7 +70,7 @@ export default {
 		{
 			//Get Projects List from the api
 			axios.get('api/admin-clubs').then(response => {
-				this.admins=response.data
+				this.admins=response.data.filter((item)=>item.role==="club-admin")
 			})
 		},
 		editadmin(key,no_plate,capacity,status,model)

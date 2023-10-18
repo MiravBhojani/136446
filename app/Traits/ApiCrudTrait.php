@@ -5,17 +5,23 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 use App\Mail\WelcomeMail;
 use Illuminate\Support\Facades\Mail;
-
+use App\Models\Club;
+use App\Models\User;
+use Illuminate\Support\Facades\Auth;
 trait ApiCrudTrait
 {
     abstract function model();
     abstract function validationRules($resource_id = 0);
+    abstract function with();
 
 
     /** Return All Records  */
     public function index()
     {
-        return $this->model()::get();
+
+        return $this->model()::when(!empty($this->with()),function($q){
+          $q->with($this->with());
+        })->get();
     }
 
     /**Save All Records To The  Database */
@@ -29,7 +35,29 @@ trait ApiCrudTrait
          $result->update(['password'=>bcrypt($random_password)]);
          $name= $result->name;
          $email= $result->email;
-         Mail::to($email)->send(new WelcomeMail($name,$email,$random_password));
+         if($this->model()==="App\Models\User")
+         {
+            Mail::to($email)->send(new WelcomeMail($name,$email,$random_password));
+
+         }
+         if($request->role=="club-admin")
+         {
+
+          $club=Club::create([
+            'name'=>$result->name,
+
+          ]);
+
+          User::where('id',$result->id)->update(['club_id'=>$club->id]);
+         }
+         if($request->role=="player")
+         {
+
+            $club_id=$request->loggedUser['club_id'];
+            User::where('id',$result->id)->update(['club_id'=>$club_id]);
+
+         }
+
 
          $result ? $status="success" : $status="error";
          return response()->json(['status'=>$status, 'results'=> $result]);

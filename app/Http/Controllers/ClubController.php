@@ -3,23 +3,23 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\User;
+use App\Models\Club;
 use App\Traits\ApiCrudTrait;
 
-class AdminClubController extends Controller
+class ClubController extends Controller
 {
     //
     use ApiCrudTrait;
 
     public function model()
     {
-        return User::class;
+        return Club::class;
     }
 
     /** Return with relations */
     public function with()
     {
-        $with = '';
+        $with = 'home_team';
         return $with;
     }
 
@@ -33,7 +33,6 @@ class AdminClubController extends Controller
         'nationality'=>'required','phone'=>'required',
         'dob'=>'required'
     ];
-
-    }
+}
 
 }
