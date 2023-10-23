@@ -23,7 +23,7 @@
                                     ><i class="bx bxs-edit-location"></i
                                 ></span>
                                 <select
-                                    class="form-control border-start-0"
+                                    class="form-select border-start-0"
                                     v-model="twelveth_man"
                                     multiple
                                 >
@@ -46,7 +46,6 @@
                                 <select
                                     class="form-control border-start-0"
                                     v-model="twelveth_man"
-
                                 >
                                     <option
                                         v-for="(player, index) in players"
@@ -59,19 +58,28 @@
                             </div>
                         </div>
                         <div class="col-md-12">
-                         <label for="name" class="form-label"
+                            <label for="name" class="form-label"
                                 >Pitch Type</label
                             >
                             <div class="input-group">
-                                <span class="input-group-text"
-                                    ></span>
-                                <select class="form-control border-start-0" v-model="pitch_type">
-                                    <option value="" disabled>Select Pitch Type</option>
+                                <span class="input-group-text"></span>
+                                <select
+                                    class="form-control border-start-0"
+                                    v-model="pitch_type"
+                                >
+                                    <option value="" disabled>
+                                        Select Pitch Type
+                                    </option>
                                     <option value="Dry Pitch">Dry Pitch</option>
-                                    <option value="Green Pitch">Green Pitch</option>
-                                     <option value="Flat Pitch">Flat Pitch</option>
-                                     <option value="Slow Pitch">Slow Pitch</option>
-
+                                    <option value="Green Pitch">
+                                        Green Pitch
+                                    </option>
+                                    <option value="Flat Pitch">
+                                        Flat Pitch
+                                    </option>
+                                    <option value="Slow Pitch">
+                                        Slow Pitch
+                                    </option>
                                 </select>
                             </div>
                         </div>
@@ -99,13 +107,13 @@
                                 />
                             </div>
                         </div>
-                        <div class="col-12 clearfix">
+                        <div class="col-6 clearfix">
                             <label for="win_team" class="form-label"
                                 >Toss Winner</label
                             >
                             <div class="input-group">
                                 <span class="input-group-text"></span>
-                                 <select
+                                <select
                                     class="form-control border-start-0"
                                     v-model="home_team"
                                 >
@@ -119,7 +127,82 @@
                                 </select>
                             </div>
                         </div>
-                        <div class="col-12 clearfix">
+                        <div class="col-6 clearfix">
+                            <label for="win_team" class="form-label"
+                                >After Toss</label
+                            >
+                            <div class="input-group">
+                                <span class="input-group-text"></span>
+                                <select
+                                    class="form-control border-start-0"
+                                    v-model="home_team"
+                                >
+                                    <option value="Bat">Bat</option>
+                                    <option value="Bat">Bowl</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-6 clearfix">
+                            <label class="form-label">Select Stricker</label>
+                            <div class="input-group">
+                                <span class="input-group-text"
+                                    ><i class="bx bxs-edit-location"></i
+                                ></span>
+                                <select
+                                    class="form-control border-start-0"
+                                    v-model="twelveth_man"
+                                >
+                                    <option
+                                        v-for="(player, index) in players"
+                                        :key="player.id"
+                                        :value="player.id"
+                                    >
+                                        {{ player.name }}
+                                    </option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-6 clearfix">
+                            <label class="form-label">Select Non Striker</label>
+                            <div class="input-group">
+                                <span class="input-group-text"
+                                    ><i class="bx bxs-edit-location"></i
+                                ></span>
+                                <select
+                                    class="form-control border-start-0"
+                                    v-model="twelveth_man"
+                                >
+                                    <option
+                                        v-for="(player, index) in players"
+                                        :key="player.id"
+                                        :value="player.id"
+                                    >
+                                        {{ player.name }}
+                                    </option>
+                                </select>
+                            </div>
+                        </div>
+                         <div class="col-6 clearfix">
+                            <label class="form-label">Select Bowler</label>
+                            <div class="input-group">
+                                <span class="input-group-text"
+                                    ><i class="bx bxs-edit-location"></i
+                                ></span>
+                                <select
+                                    class="form-control border-start-0"
+                                    v-model="twelveth_man"
+                                >
+                                    <option
+                                        v-for="(player, index) in players"
+                                        :key="player.id"
+                                        :value="player.id"
+                                    >
+                                        {{ player.name }}
+                                    </option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-6 clearfix">
                             <label for="power_play" class="form-label"
                                 >Power Play</label
                             >
@@ -209,7 +292,7 @@ export default {
         return {
             matches: [],
             players: [],
-            clubs:[],
+            clubs: [],
             displayScoreForm: false,
             overs: "",
             overs_per_bowler: "",
@@ -245,13 +328,14 @@ export default {
                 );
             });
         },
-        fetchAdmins()
-		{
-			//Get Projects List from the api
-			axios.get('api/admin-clubs').then(response => {
-				this.clubs=response.data.filter((item)=>item.role==="club-admin")
-			})
-		},
+        fetchAdmins() {
+            //Get Projects List from the api
+            axios.get("api/admin-clubs").then((response) => {
+                this.clubs = response.data.filter(
+                    (item) => item.role === "club-admin"
+                );
+            });
+        },
         addScore(key) {
             if (key !== "") {
                 this.displayScoreForm = true;
@@ -316,7 +400,7 @@ export default {
     created() {
         this.fetchMatches();
         this.fetchPlayers();
-        this.fetchAdmins()
+        this.fetchAdmins();
     },
 };
 </script>
