@@ -229,7 +229,7 @@ id,Name,Matches,Overs Bowled,Wickets,Runs Given,Economy,Average,Performance Wick
 228,Fiann Beadman,6,6,12,36,6.87,3,3,2,3,4,2
 229,Web Curee,8,6,6,85,4.99,14,1,3,1,1,1
 230,Tamas Venart,7,6,8,82,5.41,10,4,4,3,3,4
-231,Marney Gilstin,5,6,6,56,8.0,9,3,3,2,4,2
+231,Marney Gilstin,5,6,6,56,8,9,3,3,2,4,2
 232,Netti Jzak,6,5,3,62,5.6,20,1,4,3,4,4
 233,Carin Coase,7,7,1,75,8.12,75,4,4,4,1,6
 234,Chariot Longfield,5,7,7,52,7.49,7,1,4,2,3,5
@@ -311,7 +311,7 @@ id,Name,Matches,Overs Bowled,Wickets,Runs Given,Economy,Average,Performance Wick
 310,Harmonie Bourtoumieux,5,7,8,59,5.47,7,1,3,2,3,2
 311,Vivianna Tomenson,7,7,2,73,6.27,36,3,1,1,1,1
 312,Felicia Longland,7,8,12,36,8.38,3,3,3,1,1,2
-313,Gwen Prigg,7,7,5,37,9.0,7,4,2,4,3,5
+313,Gwen Prigg,7,7,5,37,9,7,4,2,4,3,5
 314,Dulcia Ilbert,8,6,10,64,4.88,6,2,3,3,1,6
 315,Mame Vassbender,7,8,4,54,8.1,13,1,1,4,3,6
 316,Carl Despenser,5,7,11,47,4.02,4,3,1,1,4,1
@@ -390,7 +390,7 @@ id,Name,Matches,Overs Bowled,Wickets,Runs Given,Economy,Average,Performance Wick
 389,Ladonna Delue,5,5,8,84,7.55,10,3,2,3,1,5
 390,Chancey Dunbobin,6,7,4,38,7.94,9,3,3,3,2,4
 391,Rica McCarl,8,7,5,51,8.33,10,1,1,4,3,5
-392,Averil Wilcott,6,8,11,40,7.0,3,1,3,2,3,1
+392,Averil Wilcott,6,8,11,40,7,3,1,3,2,3,1
 393,Karyn Elgood,5,6,5,36,8.09,7,1,2,2,1,5
 394,Leann Barday,5,5,2,51,8.94,25,4,3,1,2,4
 395,Merlina Pilmore,6,7,6,71,4.99,11,1,1,4,3,5

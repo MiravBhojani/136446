@@ -6022,6 +6022,89 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {
@@ -6063,7 +6146,7 @@ __webpack_require__.r(__webpack_exports__);
       var _this3 = this;
 
       //Get Projects List from the api
-      axios.get('api/admin-clubs').then(function (response) {
+      axios.get("api/admin-clubs").then(function (response) {
         _this3.clubs = response.data.filter(function (item) {
           return item.role === "club-admin";
         });
@@ -30359,7 +30442,7 @@ var render = function () {
                                 expression: "twelveth_man",
                               },
                             ],
-                            staticClass: "form-control border-start-0",
+                            staticClass: "form-select border-start-0",
                             attrs: { multiple: "" },
                             on: {
                               change: function ($event) {
@@ -30497,7 +30580,11 @@ var render = function () {
                             _c(
                               "option",
                               { attrs: { value: "", disabled: "" } },
-                              [_vm._v("Select Pitch Type")]
+                              [
+                                _vm._v(
+                                  "\n                                    Select Pitch Type\n                                "
+                                ),
+                              ]
                             ),
                             _vm._v(" "),
                             _c("option", { attrs: { value: "Dry Pitch" } }, [
@@ -30505,15 +30592,21 @@ var render = function () {
                             ]),
                             _vm._v(" "),
                             _c("option", { attrs: { value: "Green Pitch" } }, [
-                              _vm._v("Green Pitch"),
+                              _vm._v(
+                                "\n                                    Green Pitch\n                                "
+                              ),
                             ]),
                             _vm._v(" "),
                             _c("option", { attrs: { value: "Flat Pitch" } }, [
-                              _vm._v("Flat Pitch"),
+                              _vm._v(
+                                "\n                                    Flat Pitch\n                                "
+                              ),
                             ]),
                             _vm._v(" "),
                             _c("option", { attrs: { value: "Slow Pitch" } }, [
-                              _vm._v("Slow Pitch"),
+                              _vm._v(
+                                "\n                                    Slow Pitch\n                                "
+                              ),
                             ]),
                           ]
                         ),
@@ -30524,7 +30617,7 @@ var render = function () {
                     _vm._v(" "),
                     _vm._m(3),
                     _vm._v(" "),
-                    _c("div", { staticClass: "col-12 clearfix" }, [
+                    _c("div", { staticClass: "col-6 clearfix" }, [
                       _c(
                         "label",
                         {
@@ -30586,9 +30679,234 @@ var render = function () {
                       ]),
                     ]),
                     _vm._v(" "),
-                    _vm._m(4),
+                    _c("div", { staticClass: "col-6 clearfix" }, [
+                      _c(
+                        "label",
+                        {
+                          staticClass: "form-label",
+                          attrs: { for: "win_team" },
+                        },
+                        [_vm._v("After Toss")]
+                      ),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "input-group" }, [
+                        _c("span", { staticClass: "input-group-text" }),
+                        _vm._v(" "),
+                        _c(
+                          "select",
+                          {
+                            directives: [
+                              {
+                                name: "model",
+                                rawName: "v-model",
+                                value: _vm.home_team,
+                                expression: "home_team",
+                              },
+                            ],
+                            staticClass: "form-control border-start-0",
+                            on: {
+                              change: function ($event) {
+                                var $$selectedVal = Array.prototype.filter
+                                  .call($event.target.options, function (o) {
+                                    return o.selected
+                                  })
+                                  .map(function (o) {
+                                    var val = "_value" in o ? o._value : o.value
+                                    return val
+                                  })
+                                _vm.home_team = $event.target.multiple
+                                  ? $$selectedVal
+                                  : $$selectedVal[0]
+                              },
+                            },
+                          },
+                          [
+                            _c("option", { attrs: { value: "Bat" } }, [
+                              _vm._v("Bat"),
+                            ]),
+                            _vm._v(" "),
+                            _c("option", { attrs: { value: "Bat" } }, [
+                              _vm._v("Bowl"),
+                            ]),
+                          ]
+                        ),
+                      ]),
+                    ]),
                     _vm._v(" "),
-                    _vm._m(5),
+                    _c("div", { staticClass: "col-6 clearfix" }, [
+                      _c("label", { staticClass: "form-label" }, [
+                        _vm._v("Select Stricker"),
+                      ]),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "input-group" }, [
+                        _vm._m(4),
+                        _vm._v(" "),
+                        _c(
+                          "select",
+                          {
+                            directives: [
+                              {
+                                name: "model",
+                                rawName: "v-model",
+                                value: _vm.twelveth_man,
+                                expression: "twelveth_man",
+                              },
+                            ],
+                            staticClass: "form-control border-start-0",
+                            on: {
+                              change: function ($event) {
+                                var $$selectedVal = Array.prototype.filter
+                                  .call($event.target.options, function (o) {
+                                    return o.selected
+                                  })
+                                  .map(function (o) {
+                                    var val = "_value" in o ? o._value : o.value
+                                    return val
+                                  })
+                                _vm.twelveth_man = $event.target.multiple
+                                  ? $$selectedVal
+                                  : $$selectedVal[0]
+                              },
+                            },
+                          },
+                          _vm._l(_vm.players, function (player, index) {
+                            return _c(
+                              "option",
+                              {
+                                key: player.id,
+                                domProps: { value: player.id },
+                              },
+                              [
+                                _vm._v(
+                                  "\n                                    " +
+                                    _vm._s(player.name) +
+                                    "\n                                "
+                                ),
+                              ]
+                            )
+                          }),
+                          0
+                        ),
+                      ]),
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "col-6 clearfix" }, [
+                      _c("label", { staticClass: "form-label" }, [
+                        _vm._v("Select Non Striker"),
+                      ]),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "input-group" }, [
+                        _vm._m(5),
+                        _vm._v(" "),
+                        _c(
+                          "select",
+                          {
+                            directives: [
+                              {
+                                name: "model",
+                                rawName: "v-model",
+                                value: _vm.twelveth_man,
+                                expression: "twelveth_man",
+                              },
+                            ],
+                            staticClass: "form-control border-start-0",
+                            on: {
+                              change: function ($event) {
+                                var $$selectedVal = Array.prototype.filter
+                                  .call($event.target.options, function (o) {
+                                    return o.selected
+                                  })
+                                  .map(function (o) {
+                                    var val = "_value" in o ? o._value : o.value
+                                    return val
+                                  })
+                                _vm.twelveth_man = $event.target.multiple
+                                  ? $$selectedVal
+                                  : $$selectedVal[0]
+                              },
+                            },
+                          },
+                          _vm._l(_vm.players, function (player, index) {
+                            return _c(
+                              "option",
+                              {
+                                key: player.id,
+                                domProps: { value: player.id },
+                              },
+                              [
+                                _vm._v(
+                                  "\n                                    " +
+                                    _vm._s(player.name) +
+                                    "\n                                "
+                                ),
+                              ]
+                            )
+                          }),
+                          0
+                        ),
+                      ]),
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "col-6 clearfix" }, [
+                      _c("label", { staticClass: "form-label" }, [
+                        _vm._v("Select Bowler"),
+                      ]),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "input-group" }, [
+                        _vm._m(6),
+                        _vm._v(" "),
+                        _c(
+                          "select",
+                          {
+                            directives: [
+                              {
+                                name: "model",
+                                rawName: "v-model",
+                                value: _vm.twelveth_man,
+                                expression: "twelveth_man",
+                              },
+                            ],
+                            staticClass: "form-control border-start-0",
+                            on: {
+                              change: function ($event) {
+                                var $$selectedVal = Array.prototype.filter
+                                  .call($event.target.options, function (o) {
+                                    return o.selected
+                                  })
+                                  .map(function (o) {
+                                    var val = "_value" in o ? o._value : o.value
+                                    return val
+                                  })
+                                _vm.twelveth_man = $event.target.multiple
+                                  ? $$selectedVal
+                                  : $$selectedVal[0]
+                              },
+                            },
+                          },
+                          _vm._l(_vm.players, function (player, index) {
+                            return _c(
+                              "option",
+                              {
+                                key: player.id,
+                                domProps: { value: player.id },
+                              },
+                              [
+                                _vm._v(
+                                  "\n                                    " +
+                                    _vm._s(player.name) +
+                                    "\n                                "
+                                ),
+                              ]
+                            )
+                          }),
+                          0
+                        ),
+                      ]),
+                    ]),
+                    _vm._v(" "),
+                    _vm._m(7),
+                    _vm._v(" "),
+                    _vm._m(8),
                   ]
                 ),
               ]),
@@ -30599,13 +30917,13 @@ var render = function () {
     _vm._v(" "),
     !_vm.displayScoreForm
       ? _c("div", { staticClass: "card-body" }, [
-          _vm._m(6),
+          _vm._m(9),
           _vm._v(" "),
           _c("hr"),
           _vm._v(" "),
           _c("div", { staticClass: "table-responsive" }, [
             _c("table", { staticClass: "table align-middle mb-0" }, [
-              _vm._m(7),
+              _vm._m(10),
               _vm._v(" "),
               _c(
                 "tbody",
@@ -30737,7 +31055,31 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "col-12 clearfix" }, [
+    return _c("span", { staticClass: "input-group-text" }, [
+      _c("i", { staticClass: "bx bxs-edit-location" }),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("span", { staticClass: "input-group-text" }, [
+      _c("i", { staticClass: "bx bxs-edit-location" }),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("span", { staticClass: "input-group-text" }, [
+      _c("i", { staticClass: "bx bxs-edit-location" }),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "col-6 clearfix" }, [
       _c("label", { staticClass: "form-label", attrs: { for: "power_play" } }, [
         _vm._v("Power Play"),
       ]),
