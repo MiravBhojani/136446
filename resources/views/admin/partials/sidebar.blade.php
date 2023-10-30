@@ -19,7 +19,7 @@
 						<div class="menu-title">Dashboard </div>
 					</a>
 					<ul>
-                        @if(Auth::user()->role==="admin")
+                        @if(Auth::user()?->role==="admin")
                     <li> <a href="{{url('new-admin')}}"><i class="bx bx-right-arrow-alt"></i>New Club</a>
 						</li>
                         <li> <a href="{{url('admins-list')}}"><i class="bx bx-right-arrow-alt"></i>Clubs List</a>
@@ -29,12 +29,12 @@
                         <li> <a href="{{url('new-match')}}"><i class="bx bx-right-arrow-alt"></i>New Match</a>
 						</li>
                         @endif
-                        @if(Auth::user()->role==="admin" || Auth::user()->role==="club-admin")
+                        @if(Auth::user()?->role==="admin" || Auth::user()->role==="club-admin")
                         <li> <a href="{{url('matches-list')}}"><i class="bx bx-right-arrow-alt"></i>Matches List</a>
 						</li>
                         @endif
 
-                        @if(Auth::user()->role==="club-admin")
+                        @if(Auth::user()?->role==="club-admin")
 						<li> <a href="{{url('new-player')}}"><i class="bx bx-right-arrow-alt"></i>New Player</a>
 						</li>
 						<li> <a href="{{url('players-list')}}"><i class="bx bx-right-arrow-alt"></i>Players Lists</a>

@@ -32,9 +32,9 @@ class PlayersController extends Controller
 
     public function validationRules($resource_id=0)
     {
-        return ['name'=>'required','email' => 'required',
-        'nationality'=>'required','phone'=>'required',
-        'dob'=>'required','batting'=>'nullable','bowling'=>'nullable',
+        return ['name'=>'required','email' => 'nullable',
+        'nationality'=>'nullable','phone'=>'nullable',
+        'dob'=>'nullable','batting'=>'nullable','bowling'=>'nullable',
         'role'=>'nullable'
     ];
 

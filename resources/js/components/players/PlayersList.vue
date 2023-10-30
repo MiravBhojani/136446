@@ -19,12 +19,14 @@
 										<tr>
 											<th>#</th>
 											<th>Name </th>
+                                            <th>DOB</th>
+                                            <!-- <th>Email</th>
+                                            <th>Phone</th> -->
                                             <th>Batting Style</th>
 											<th>Bowling Style</th>
-											<th>Phone</th>
-											<th>Date Of Birth</th>
-											<th>Nationality</th>
-											<th>Date Registered</th>
+
+
+
 
 										</tr>
 									</thead>
@@ -34,16 +36,12 @@
 											<td>
 												{{player.name}}
 											</td>
+                                            <td>{{player.dob}}</td>
+
 											<td>{{player.batting}}</td>
 											<td>{{player.bowling}}</td>
-                                            <td>{{player.phone}}</td>
-											<td>{{player.dob}}</td>
-											<td>
-												{{player.nationality}}
-											</td>
-											<td>
-												{{player.created_at}}
-											</td>
+											
+
 
 										</tr>
 

@@ -9,5 +9,5 @@ class Club extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['name'];
+    protected $fillable = ['name','home_ground'];
 }

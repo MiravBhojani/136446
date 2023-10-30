@@ -57,7 +57,7 @@
                         </div>
                         <div class="col-md-6">
                             <label for="name" class="form-label"
-                                >Start Date</label
+                                >Match Day</label
                             >
                             <div class="input-group">
                                 <span class="input-group-text"
@@ -71,7 +71,7 @@
                                 />
                             </div>
                         </div>
-                        <div class="col-md-6">
+                        <!-- <div class="col-md-6">
                             <label for="name" class="form-label"
                                 >End Date</label
                             >
@@ -86,7 +86,7 @@
                                     id="name"
                                 />
                             </div>
-                        </div>
+                        </div> -->
 
                         <!-- <div class="col-md-6">
                             <label for="name" class="form-label"
@@ -208,7 +208,6 @@ export default {
             home_team: "",
             away_team: "",
             start_date: "",
-            end_date: "",
             home_captain:"",
             away_captain:"",
             twelveth_man:"",
@@ -235,7 +234,7 @@ export default {
                 home_team: this.home_team,
                 away_team: this.away_team,
                 start_date: this.start_date,
-                end_date: this.end_date,
+                // end_date: this.end_date,
                 // home_captain:this.home_captain,
                 // away_captain:this.away_captain,
                 // twelveth_man:this.twelveth_man,

@@ -110,7 +110,7 @@
                                 </select>
                             </div>
                         </div>
-                        <div class="col-12 clearfix">
+                        <!-- <div class="col-12 clearfix">
                             <label  class="form-label"
                                 >Nationality</label
                             >
@@ -128,7 +128,7 @@
 
                                 </select>
                             </div>
-                        </div>
+                        </div> -->
 
 
 
@@ -156,7 +156,6 @@ export default {
             email: "",
             phone: "",
             dob: "",
-            nationality:"",
             batting:"",
             bowling:"",
         };
@@ -167,7 +166,6 @@ export default {
             this.email = "";
             this.phone = "";
             this.dob = "";
-            this.nationality="";
             this.batting="",
             this.bowling=""
         },
@@ -180,7 +178,6 @@ export default {
                 email: this.email,
                 phone: this.phone,
                 dob: this.dob,
-                nationality:this.nationality,
                 password:password,
                 batting:this.batting,
                 bowling:this.bowling,

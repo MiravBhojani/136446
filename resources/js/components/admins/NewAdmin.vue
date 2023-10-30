@@ -61,21 +61,21 @@
                         </div>
                        <div class="col-md-6">
                             <label for="name" class="form-label"
-                                >Date Of Birth</label
+                                >Home Ground</label
                             >
                             <div class="input-group">
                                 <span class="input-group-text"
                                     ><i class="bx bx-calendar"></i
                                 ></span>
                                 <input
-                                    type="date"
-                                    v-model="dob"
+                                    type="text"
+                                    v-model="home_ground"
                                     class="form-control border-start-0"
                                     id="name"
                                 />
                             </div>
                         </div>
-                        <div class="col-12 clearfix">
+                        <!-- <div class="col-12 clearfix">
                             <label  class="form-label"
                                 >Nationality</label
                             >
@@ -93,7 +93,7 @@
 
                                 </select>
                             </div>
-                        </div>
+                        </div> -->
 
 
 
@@ -120,12 +120,8 @@ export default {
             name: "",
             email: "",
             phone: "",
-            dob: "",
+            home_ground: "",
             nationality:"",
-            sub_nationality:"",
-            budget:"",
-            financial_year:"",
-            department_id:"",
             status:""
         };
     },
@@ -134,7 +130,7 @@ export default {
             this.name = "";
             this.email = "";
             this.phone = "";
-            this.dob = "";
+            this.home_ground = "";
             this.nationality="";
 
         },
@@ -145,7 +141,7 @@ export default {
                 name: this.name,
                 email: this.email,
                 phone: this.phone,
-                dob: this.dob,
+                home_ground: this.home_ground,
                 nationality:this.nationality,
                 password:password,
                 role:"club-admin"

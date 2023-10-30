@@ -1,5 +1,103 @@
 <template>
     <div class="card radius-10">
+       <div class="card-body" v-if="displayEditForm">
+            <span
+                @click="displayEditForm = !displayEditForm"
+                class="btn btn-warning btn-sm pull-right"
+            >
+                View Clubs</span
+            >
+            <hr />
+
+            <h6 class="mb-0 text-uppercase text-center">
+                Edit Club Details Here
+            </h6>
+            <div class="card border-top border-0 border-4 border-white">
+                <div class="card-body p-5">
+                    <hr />
+                    <form class="row g-3" method="POST" @submit="updateAdmin">
+                        <div class="col-md-6">
+                            <label for="name" class="form-label"
+                                >Name</label
+                            >
+                            <div class="input-group">
+                                <span class="input-group-text"
+                                    ><i class="bx bxs-user"></i
+                                ></span>
+                                <input
+                                    type="text"
+                                    v-model="name"
+                                    class="form-control border-start-0"
+                                    id="name"
+                                />
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="name" class="form-label"
+                                >Email</label
+                            >
+                            <div class="input-group">
+                                <span class="input-group-text"
+                                    ><i class="bx bx-mail-send"></i
+                                ></span>
+                                <input
+                                    type="text"
+                                    v-model="email"
+                                    class="form-control border-start-0"
+                                    id="name"
+                                />
+                            </div>
+                        </div>
+                       <div class="col-md-6">
+                            <label for="name" class="form-label"
+                                >Phone</label
+                            >
+                            <div class="input-group">
+                                <span class="input-group-text"
+                                    ><i class="bx bx-phone"></i
+                                ></span>
+                                <input
+                                    type="text"
+                                    v-model="phone"
+                                    class="form-control border-start-0"
+                                    id="name"
+                                />
+                            </div>
+                        </div>
+                       <div class="col-md-6">
+                            <label for="name" class="form-label"
+                                >Home Ground</label
+                            >
+                            <div class="input-group">
+                                <span class="input-group-text"
+                                    ><i class="bx bx-calendar"></i
+                                ></span>
+                                <input
+                                    type="text"
+                                    v-model="home_ground"
+                                    class="form-control border-start-0"
+                                    id="name"
+                                />
+                            </div>
+                        </div>
+
+
+
+
+
+
+                        <div class="col-12 mx-auto center">
+                            <button
+                                type="submit"
+                                class="btn btn-light px-5 text-center my-auto"
+                            >
+                                UPDATE
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
 
 
 
@@ -21,9 +119,9 @@
 											<th>Name </th>
 											<th>Email</th>
 											<th>Phone</th>
-											<th>Date Of Birth</th>
-											<th>Nationality</th>
-											<th>Date Registered</th>
+											<th>Home Ground</th>
+                                            <th>Edit</th>
+
 
 										</tr>
 									</thead>
@@ -35,13 +133,19 @@
 											</td>
 											<td>{{admin.email}}</td>
 											<td>{{admin.phone}}</td>
-											<td>{{admin.dob}}</td>
-											<td>
-												{{admin.nationality}}
-											</td>
-											<td>
-												{{admin.created_at}}
-											</td>
+											<td>{{admin.home_ground}}</td>
+                                             <td>
+                                <div class="d-flex order-actions">
+                                    <button
+                                        @click="editAdmin(admin.id,admin.name,admin.email,admin.phone,admin.home_ground)"
+                                        class="btn btn-primary"
+                                        style="margin: 3px; cursor: pointer"
+                                    >
+                                        Edit
+                                    </button>
+                                    </div>
+                                    </td>
+
 
 										</tr>
 
@@ -57,11 +161,11 @@ export default {
 		 return {
           admins:[],
 		  displayEditForm:false,
-		  	admin_no_plate:"",
-			capacity:"",
-			status:"",
-			model:"",
-			editadminId:"",
+		  	name:"",
+			email:"",
+			phone:"",
+			home_ground:"",
+            edit_admin_id:""
 		 }
 	},
 	methods:
@@ -73,46 +177,47 @@ export default {
 				this.admins=response.data.filter((item)=>item.role==="club-admin")
 			})
 		},
-		editadmin(key,no_plate,capacity,status,model)
+		editAdmin(key,name,email,phone,home_ground)
 		{
-			if(key!==" " && no_plate!=="" && capacity!=="" && status!=="" && model!=="")
+			if(key!==" " && name!=="" && email!=="" && phone!=="" && home_ground!=="")
 			{
 				this.displayEditForm = true;
-				this.admin_no_plate = no_plate,
-				this.capacity = capacity;
-				this.model = model;
-				this.status = status;
-				this.editadminId = key;
+				this.name= name,
+				this.email = email;
+				this.phone = phone;
+				this.home_ground = home_ground;
+				this.edit_admin_id = key;
 			}
-			console.log(key,no_plate);
+			console.log("addmin id is " + this.edit_admin_id);
 		},
 		clearFormData()
 		{
-			this.admin_no_plate="";
-			this.capacity="";
-			this.status="";
-			this.model="";
+			this.name= "",
+				this.email ="";
+				this.phone = "";
+				this.home_ground = "";
+				this.edit_admin_id = "";
 		},
-		updateadmin(e)
+		updateAdmin(e)
 		{
 			e.preventDefault();
 			let obj = {
-				admin_no_plate:this.admin_no_plate,
-				capacity:this.capacity,
-				status:this.status,
-				model:this.model,
+				name:this.name,
+				phone:this.phone,
+				home_ground:this.home_ground,
+				email:this.email,
 			};
 			// let currentObj = this;
 			// this.sendData = true;
 
-			axios.put(`api/admins/${this.editAdminId}`,obj).then(response => {
+			axios.put(`api/admin-clubs/${this.edit_admin_id}`,obj).then(response => {
 
 				if(response.data.status=="success")
 				{
 					alert("admin Successfully Updated");
 					this.clearFormData();
 					this.displayEditForm = false;
-					this.vehicles = response.data.info;
+					this.admins = response.data.info.filter((item)=>item.role==="club-admin");
 				}
 				else
 				{
@@ -121,16 +226,16 @@ export default {
 
 			})
 		},
-		deleteVehicle(key)
+		deleteAdmin(key)
 		{
 			if(key!=="" && key!==null)
 			{
-				if(confirm("Are you sure you want to delete this vehicle"))
+				if(confirm("Are you sure you want to delete this admin"))
 				{
 					axios.delete(`api/vehicles/${key}`).then(response => {
 						if(response.data.status=="success")
 						{
-							alert("Vehicle Has Been Removed");
+							alert("Admin Has Been Removed");
 							this.vehicles = response.data.info
 						}
 						else

@@ -45,7 +45,7 @@ trait ApiCrudTrait
 
           $club=Club::create([
             'name'=>$result->name,
-
+            'home_ground'=>$result->home_ground
           ]);
 
           User::where('id',$result->id)->update(['club_id'=>$club->id]);

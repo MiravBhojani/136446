@@ -29,9 +29,9 @@ class AdminClubController extends Controller
 
     public function validationRules($resource_id=0)
     {
-        return ['name'=>'required','email' => 'required',
-        'nationality'=>'required','phone'=>'required',
-        'dob'=>'required'
+        return ['name'=>'required','email' => 'nullable',
+        'nationality'=>'nullable','phone'=>'nullable',
+        'dob'=>'nullable','home_ground'=>'nullable'
     ];
 
     }

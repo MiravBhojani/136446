@@ -26,7 +26,8 @@ class User extends Authenticatable
         'dob',
         'role',
         'batting',
-        'bowling'
+        'bowling',
+        'home_ground'
     ];
 
     /**
@@ -48,5 +49,5 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
-    
+
 }
