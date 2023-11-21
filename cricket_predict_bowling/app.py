@@ -59,4 +59,4 @@ def predict():
     return render_template('index.html', best_players=top_players_comparison_bw.to_dict('records'))
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(port=5001)
