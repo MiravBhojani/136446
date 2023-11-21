@@ -1,1 +1,0 @@
-My name is Mirav Hirji Bhojani, 136446 doing a final year project with the title being: Player Performance Prediction using Machine Learning Algorithm.
