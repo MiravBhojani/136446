@@ -95,43 +95,48 @@ class Welcome extends CI_Controller
 
 	}
 
+
+	/**
+	 * @return void
+	 */
 	public function exportCSV()
 	{
 		// Load data from the BattingLeaderboard table
-		$battingData = $this->db->get('battingleaderboard')->result_array();
-
-		// Load data from the BowlingReport table
-		$bowlingData = $this->db->get('bowlingreport')->result_array();
+		$battingData = $this->db
+			->select('player_name, matches, runs,bowls,outs,performanceruns5,performanceruns4,performanceruns3,performanceruns2,performanceruns1')
+			->from('battingleaderboard')
+			->order_by("runs desc")
+			->limit(10)
+			->get()
+			->result_array();
 
 		// Create CSV content for BattingLeaderboard
-		$battingCsvContent = $this->arrayToCsv($battingData);
+		$titleData = ['Player Name', 'Matches', 'Runs', 'Bowls', 'Outs', 'Performance Runs 5', 'Performance Runs 4', 'Performance Runs 3', 'Performance Runs 2', 'Performance Runs 1'];
+		$battingCsvContent = $this->arrayToCsv($battingData, $titleData);
 
 		// Set the file name for BattingLeaderboard
-		$battingFileName = 'batting_leaderboard.csv';
+		$battingFileName = 'Battingdata.csv';
 
 		// Force download the BattingLeaderboard CSV file
 		force_download($battingFileName, $battingCsvContent);
-
-		// Create CSV content for BowlingReport
-		$bowlingCsvContent = $this->arrayToCsv($bowlingData);
-
-		// Set the file name for BowlingReport
-		$bowlingFileName = 'bowling_report.csv';
-
-		// Force download the BowlingReport CSV file
-		force_download($bowlingFileName, $bowlingCsvContent);
 	}
 
 	public function bexportCSV()
 	{
 		// Load data from the BowlingReport table
-		$bowlingData = $this->db->get('bowlingreport')->result_array();
+		$bowlingData = $this->db
+			->select("player_name, matches, oversbowled, bowls, runsgiven, wicketstaken, economy, performancewickets5, performancewickets4, performancewickets3, performancewickets2, performancewickets1")
+			->from("bowlingreport")
+			->order_by("wicketstaken desc")
+			->limit(10)
+			->get()->result_array();
 
 		// Create CSV content for BowlingReport
-		$bowlingCsvContent = $this->arrayToCsv($bowlingData);
+		$title = ['Player Name', 'Matches', 'Overs Bowled', 'Bowls', 'Runs Given', 'Wickets Taken', 'Economy', 'Performance Wickets 5', 'Performance Wickets 4', 'Performance Wickets 3', 'Performance Wickets 2', 'Performance Wickets 1'];
+		$bowlingCsvContent = $this->arrayToCsv($bowlingData, $title);
 
 		// Set the file name for BowlingReport
-		$bowlingFileName = 'bowling_report.csv';
+		$bowlingFileName = 'Bowlingdata.csv';
 
 		// Send BowlingReport CSV file to the browser
 		header('Content-Type: text/csv');
@@ -212,9 +217,15 @@ class Welcome extends CI_Controller
 	}
 
 
-	private function arrayToCsv($array)
+	private function arrayToCsv($array, $title = null)
 	{
 		$output = fopen('php://temp', 'w');
+
+		//title
+		if ($title) {
+			fputcsv($output, $title);
+		}
+
 		foreach ($array as $row) {
 			fputcsv($output, $row);
 		}
