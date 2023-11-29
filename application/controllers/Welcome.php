@@ -111,7 +111,7 @@ class Welcome extends CI_Controller
 			->result_array();
 
 		// Create CSV content for BattingLeaderboard
-		$titleData = ['Player Name', 'Matches', 'Runs', 'Bowls', 'Outs', 'Performance Runs 5', 'Performance Runs 4', 'Performance Runs 3', 'Performance Runs 2', 'Performance Runs 1'];
+		$titleData = ['Name', 'Matches', 'Runs', 'Bowls', 'Outs', 'Performance Runs 5', 'Performance Runs 4', 'Performance Runs 3', 'Performance Runs 2', 'Performance Runs 1'];
 		$battingCsvContent = $this->arrayToCsv($battingData, $titleData);
 
 		// Set the file name for BattingLeaderboard
@@ -132,7 +132,7 @@ class Welcome extends CI_Controller
 			->get()->result_array();
 
 		// Create CSV content for BowlingReport
-		$title = ['Player Name', 'Matches', 'Overs Bowled', 'Bowls', 'Runs Given', 'Wickets Taken', 'Economy', 'Performance Wickets 5', 'Performance Wickets 4', 'Performance Wickets 3', 'Performance Wickets 2', 'Performance Wickets 1'];
+		$title = ['Name', 'Matches', 'Overs Bowled', 'Bowls', 'Runs Given', 'Wickets Taken', 'Economy', 'Performance Wickets 5', 'Performance Wickets 4', 'Performance Wickets 3', 'Performance Wickets 2', 'Performance Wickets 1'];
 		$bowlingCsvContent = $this->arrayToCsv($bowlingData, $title);
 
 		// Set the file name for BowlingReport
