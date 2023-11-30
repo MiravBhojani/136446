@@ -1219,7 +1219,7 @@ class Welcome extends CI_Controller
 
 		$this->email->initialize($config);
 		$this->email->set_newline("\r\n");
-		$fromEmail = 'info@suq.world';
+		$fromEmail = 'miravbhojani@gmail.com';
 		$fromName = 'Cricket System';
 
 		$this->email->from($fromEmail, $fromName);
