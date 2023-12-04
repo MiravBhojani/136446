@@ -1120,7 +1120,7 @@ class Welcome extends CI_Controller
 			$sendGridApiUrl = 'https://api.sendgrid.com/v3/mail/send';
 
 			// Sender details
-			$fromEmail = 'info@suq.world';
+			$fromEmail = 'miravbhojani@gmail.com';
 			$fromName = 'Cricket System';
 
 			// Recipient details

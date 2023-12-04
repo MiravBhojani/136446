@@ -1,0 +1,40 @@
+Figure 2.1: Correlation of combined average of batsmen (Hasanika et al., 2021)
+Figure 2.2: Distribution of confidence association rules against combined average (Hasanika et al., 2021)
+Figure 2.3: Best fitted svr line for Run and Ball face (Anik et al., 2018)
+Figure 2.4: Joint plot of result vs strike rate (Shetty et al., 2020)
+Figure 2.5: Conceptual Framework
+Figure 3.1: Waterfall with feedback methodology (Fagarasan et al., 2021)
+Figure 4.1: System Architecture
+Figure 4.2: Use Case Diagram
+Figure 4.3: Sequence Diagram - Admin
+Figure 4.4: Sequence Diagram - Club
+Figure 4.5: System Sequence Diagram
+Figure 4.6: Entity Relationship Diagram
+Figure 4.7: Class Diagram
+Figure 4.8: Activity Diagram
+Figure 4.9: Database Schema
+Figure 4.10: Landing Page Wireframe
+Figure 4.11: Login Page Wireframe
+Figure 4.12: Prediction Model Wireframe
+Figure 5.1: Batting Dataset Overview
+Figure 5.2: Batting Data Description
+Figure 5.3: Bowling Data Overview
+Figure 5.4: Bowling Data Description
+Figure 5.5: Data Splitting and Training
+Figure 5.6: Outcome of the Data Training
+Figure 5.7: Black Box Testing (Romdhana et al., 2022)
+
+
+
+
+
+
+Table 1: Tests to be used
+Table 2: Use Case Scenario 1
+Table 3: Use Case Scenario 2
+Table 4: Use Case Scenario 3
+Table 5: Hardware Requirements
+Table 6: Software Requirements
+Table 7: Test Case and Results
+Table 8: Student Details
+Table 9: Marking Guide

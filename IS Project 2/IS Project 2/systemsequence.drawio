@@ -1,0 +1,79 @@
+<mxfile host="app.diagrams.net" modified="2023-09-04T19:21:30.681Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36 Edg/116.0.1938.54" etag="8h55aaYyhUtp7-WODCo3" version="21.7.2" type="device">
+  <diagram name="Page-1" id="9085YLEbbxznDRjFwO0R">
+    <mxGraphModel dx="979" dy="1230" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="T18Gto6am46O8-BxDyT2-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="T18Gto6am46O8-BxDyT2-1" target="T18Gto6am46O8-BxDyT2-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="T18Gto6am46O8-BxDyT2-1" value="Admin" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="1">
+          <mxGeometry x="243" y="-306" width="30" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="T18Gto6am46O8-BxDyT2-2" value="" style="image;points=[];aspect=fixed;html=1;align=center;shadow=0;dashed=0;image=img/lib/allied_telesis/computer_and_terminals/Personal_Computer_Wireless.svg;" vertex="1" parent="1">
+          <mxGeometry x="383" y="-308.1" width="63" height="64.2" as="geometry" />
+        </mxCell>
+        <mxCell id="T18Gto6am46O8-BxDyT2-5" value="Player Performance Prediction Model" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="682" y="-504" width="217" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="T18Gto6am46O8-BxDyT2-4" value="" style="whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="500.75" y="-471.75" width="579.5" height="579.5" as="geometry" />
+        </mxCell>
+        <mxCell id="T18Gto6am46O8-BxDyT2-8" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="T18Gto6am46O8-BxDyT2-6" target="T18Gto6am46O8-BxDyT2-7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="T18Gto6am46O8-BxDyT2-6" value="Leaderboard Uploaded&amp;nbsp;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="730.5" y="-455" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="T18Gto6am46O8-BxDyT2-10" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="T18Gto6am46O8-BxDyT2-7" target="T18Gto6am46O8-BxDyT2-9">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="T18Gto6am46O8-BxDyT2-7" value="Data cleaning and preprocessing" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="730.5" y="-374" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="T18Gto6am46O8-BxDyT2-12" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="T18Gto6am46O8-BxDyT2-9" target="T18Gto6am46O8-BxDyT2-11">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="T18Gto6am46O8-BxDyT2-9" value="Feature engineering" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="730.5" y="-293" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="T18Gto6am46O8-BxDyT2-15" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="T18Gto6am46O8-BxDyT2-11" target="T18Gto6am46O8-BxDyT2-14">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="T18Gto6am46O8-BxDyT2-11" value="Data splitting&amp;nbsp;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="730.5" y="-212" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="T18Gto6am46O8-BxDyT2-13" value="User Interface" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="368" y="-243.9" width="93" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="T18Gto6am46O8-BxDyT2-17" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="T18Gto6am46O8-BxDyT2-14" target="T18Gto6am46O8-BxDyT2-16">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="T18Gto6am46O8-BxDyT2-14" value="Decision Tree and Random Forest" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="730.5" y="-131" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="T18Gto6am46O8-BxDyT2-19" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="T18Gto6am46O8-BxDyT2-16" target="T18Gto6am46O8-BxDyT2-18">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="T18Gto6am46O8-BxDyT2-16" value="Train Dataset" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="730.5" y="-50" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="T18Gto6am46O8-BxDyT2-22" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.06;entryY=0.686;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="T18Gto6am46O8-BxDyT2-18" target="T18Gto6am46O8-BxDyT2-20">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="T18Gto6am46O8-BxDyT2-18" value="Make Prediction" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="730.5" y="31" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="T18Gto6am46O8-BxDyT2-20" value="" style="sketch=0;pointerEvents=1;shadow=0;dashed=0;html=1;strokeColor=none;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;align=center;fillColor=#505050;shape=mxgraph.mscae.intune.reports" vertex="1" parent="1">
+          <mxGeometry x="1273" y="2" width="95" height="86" as="geometry" />
+        </mxCell>
+        <mxCell id="T18Gto6am46O8-BxDyT2-21" value="Downloaded Prediction Report" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="1230" y="94" width="181" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="T18Gto6am46O8-BxDyT2-23" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="T18Gto6am46O8-BxDyT2-2" target="T18Gto6am46O8-BxDyT2-6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

@@ -1,0 +1,22 @@
+Figure 2. 1: Correlation of combined average of batsmen (Dinithi Hasanika, 2021)	8
+Figure 2. 2: Distribution of confidence association rules against combined average (Dinithi Hasanika, 2021)	8
+Figure 2. 3: Best fitted svr line for Run and Ball face (Aminul Islam Anik, 2018)	9
+Figure 2. 4: Joint plot of result vs strike rate (Monali Shetty, 2020)	10
+Figure 2.5: Conceptual Framework	12
+Figure 3. 1: Waterfall with feedback methodology (Prepinsta, 2020)	13
+Figure 4. 1:System Architecture	23
+Figure 4. 2: Use Case Diagram	24
+Figure 4. 3: Sequence Diagram - Admin	26
+Figure 4. 4: Sequence Diagram - Club	27
+Figure 4. 5: Sequence Diagram - Spectator	28
+Figure 4. 6: System Sequence Diagram	29
+Figure 4. 7: Entity Relationship Diagram	30
+Figure 4. 8: Class Diagram	31
+Figure 4. 9: Activity Diagram	32
+Figure 4. 10: Database Schema	33
+Figure 4. 11: Landing Page Wireframe	34
+Figure 4. 12: Login Page Wireframe	34
+Figure 4. 13: Scoring Page Wireframe	35
+Figure 4. 14: Prediction Model Wireframe	35
+
+

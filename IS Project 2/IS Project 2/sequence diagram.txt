@@ -1,0 +1,32 @@
+title Cricket Player Performance Prediction Model
+
+actor Club
+Club->UI: Login
+UI->DB: Verify Credentials
+DB-->UI: Authentication Success
+Club->UI: Score for Matches
+UI->DB: Record Match Scores
+Club->UI: View Scores
+UI->DB: Retrieve Match Scores
+DB--> Club: Scores
+actor Admin
+Admin->UI: Login
+UI->DB: Verify Credentials
+DB-->UI: Authentication Success
+Admin->UI: Generate Leaderboard
+UI->DB: Generate Leaderboard Report
+DB-->Admin: Generated Report
+Admin->UI: Send Data for Prediction
+actor Spectator
+UI->Model: Run Prediction 
+Model-->UI: Predicted Performance 
+
+Spectator->UI: Register
+UI->DB: Register Spectator
+
+Spectator->UI: Login
+UI->DB: Verify Credentials
+DB-->UI: Authentication Success
+Spectator->UI: View Match Scores
+UI->DB: Retrieve Match Scores
+DB-->UI: Display Match Scores
